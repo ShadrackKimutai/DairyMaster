@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="DairyMaster.exe" version="1.0.0.0" publicKeyToken="aa6ad0e9c26aeddb" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="DairyMaster" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DairyMaster.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DairyMaster.exe" size="72192">
+      <assemblyIdentity name="DairyMaster" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>qfBzS0eBm2wwo4JSaV/IgyVgRz3FJksNFNNBUG3BXAE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MahApps.Metro.dll" size="849920">
+      <assemblyIdentity name="MahApps.Metro" version="1.1.2.0" publicKeyToken="F4FB5A3C4D1E5B4F" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>r5R2dAFxVrruWw/REoZQ811Lpi4VZdh9iu/gIyH0I8U=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Windows.Interactivity.dll" size="55904">
+      <assemblyIdentity name="System.Windows.Interactivity" version="4.5.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>k/vFnkiAr8nxNsOsCXatp/P6p8rO3OXIJLM3y8qdLr8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="DairyMaster.exe.config" size="177">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5Cl71GbhFS9rD6YTZpYbXpMTChV4WDqqdL3eFsPgipk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DairyMaterDB.mdf" size="3211264" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WZtm3yOKl8X03xU8dZLvZ37ezQek1bDYP1qXMSKDH/I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DairyMaterDB_log.ldf" size="802816" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JYF2HD7xHOp5UMlwsYGMesa7BcU/2IQ5B5+2u1qPEZE=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=Shady\Shadrack" issuerKeyHash="7a9a5d0ad3e3d6e369a2d5b628734cd616e2ce44" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6xLtBHROUswHtV3Dc4vRriZP+lHTBTS3oOj7MDQtm0w=</DigestValue></Reference></SignedInfo><SignatureValue>LMRhvT8s+vMxFBjvFJu3biDmiE6qOkN4ZCihAvp4x+wEgsdkFgrQixSX57dD+EJknV+b/pjTcRUzHWUDHvJYO4jMp/z4sz73LCM34QUcLe09r3g8iLGDDjQcSSqORsj6+fx9YcqjhUdfeAgsOVV69IYFXfbFgnhsEW8k6ZfyBug=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>35s/aIpKzmhWpX2GW7UZ6zO+BnzygJJrY9gyrIlVrCQ7ZsBy53BoDebam5LdHa736nSTKxBbZsTJiL2OQTQOmcLoWhU8KyfI9bV3/R/YvF2CgwdC6ryNq2vEgEQiSBb9H2dF5YafDgvGNS60QS66WK53HuzzC8AWpXsPcmVY1FM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="4c9b2d3430fbe8a0b73405d351fa4f26aed18b73c35db507cc524e7404ed12eb" Description="" Url=""><as:assemblyIdentity name="DairyMaster.exe" version="1.0.0.0" publicKeyToken="aa6ad0e9c26aeddb" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Shady\Shadrack</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>qQhxVTeEgkE6htqCdVFNsHUAz1UffCPVLI5z/D0qb1U=</DigestValue></Reference></SignedInfo><SignatureValue>eOWq2aO5kgFYMGZNcOLn7Zn+INljCp2XPLKGdEgFhiGtOD++k6K8R+NfyGJJ4GvB4tF5VfnoJlWhk1J2bNL8/AsvgOlZbhGwZwlfZrJm3JEJExq3VUrHeKAgEUtaDXNiDRpivbO61YRa9AF5e5aKYEA+mKCg+KjgnmDwfrANUJU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>35s/aIpKzmhWpX2GW7UZ6zO+BnzygJJrY9gyrIlVrCQ7ZsBy53BoDebam5LdHa736nSTKxBbZsTJiL2OQTQOmcLoWhU8KyfI9bV3/R/YvF2CgwdC6ryNq2vEgEQiSBb9H2dF5YafDgvGNS60QS66WK53HuzzC8AWpXsPcmVY1FM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQX9z3Ui6dyI1FX/lWHJeXTTANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwAUwBoAGEAZAB5AFwAUwBoAGEAZAByAGEAYwBrMB4XDTE1MDgwMzA4NTkwNFoXDTE2MDgwMjE0NTkwNFowJzElMCMGA1UEAx4cAFMAaABhAGQAeQBcAFMAaABhAGQAcgBhAGMAazCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA35s/aIpKzmhWpX2GW7UZ6zO+BnzygJJrY9gyrIlVrCQ7ZsBy53BoDebam5LdHa736nSTKxBbZsTJiL2OQTQOmcLoWhU8KyfI9bV3/R/YvF2CgwdC6ryNq2vEgEQiSBb9H2dF5YafDgvGNS60QS66WK53HuzzC8AWpXsPcmVY1FMCAwEAATANBgkqhkiG9w0BAQsFAAOBgQAtc/AfKR1iy1u1GsYw7xBtuFE2eiSVHiSzQbNrykwnoUqcf4sQeX+cAEtiHky+p2kdFnYtYr8jYr6NezXAnUJMjjbXH6eEZuEtfJKvgJLReY02KncuBdJ/mEODNsBnt9+ZLYug7UAXNQPwtwmk11QLaLWE9KFY6cDqkU8yU/R+mQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,107 @@
+﻿<controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:Custom="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon" x:Name="outdelivery" x:Class="DairyMaster.apps.outDelivery"
+        Title="Milk Delivery" Height="555" Width="819" GlowBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ShowInTaskbar="False" Loaded="outDelivery_Loaded">
+    <Grid HorizontalAlignment="Left">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="68*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0,0,-3,7" HorizontalAlignment="Left" Grid.ColumnSpan="2" >
+            <controls:MetroTabControl Height="506" Width="811" x:Name="tabC">
+                <TabItem TabIndex="0" Header="Loaded at Cooperative" x:Name="loadEdatCoop">
+
+                    <Grid HorizontalAlignment="Stretch" Margin="10,0,9,0">
+                        <GroupBox Header="Milk Loaded" Margin="-36,42,36,-17" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" >
+                            <Grid Margin="0,10,0,-10" Width="802">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="38"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="52*"/>
+                                    <ColumnDefinition Width="349*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblLitres" Content="Milk Kg's Loaded" Height="28" VerticalAlignment="Top"/>
+                                <Label x:Name="lblLoader" Content="Loaded by:" Height="26" VerticalAlignment="Top" Margin="0,8,0,0" Grid.Row="1" RenderTransformOrigin="0.455,1.232"/>
+                                <Label x:Name="lblTransporter" Content="Transporter:" Height="26" VerticalAlignment="Top" Margin="0,8,0,0" Grid.Row="2" RenderTransformOrigin="0.455,1.232"/>
+                                <Label x:Name="lblDriver" Content="Driver:" Height="25" VerticalAlignment="Top" Margin="0,4,0,0" Grid.Row="3" RenderTransformOrigin="0.455,1.232"/>
+                                <Label x:Name="lblConductor" Content="Conductor:" Height="29" VerticalAlignment="Top" Grid.Row="4" RenderTransformOrigin="0.455,1.232" Margin="0,5,0,0"/>
+                                <Label x:Name="lblVehicle" Content="Vehicle:" Height="29" VerticalAlignment="Top" Grid.Row="5" RenderTransformOrigin="0.455,1.232" Margin="0,9,0,0"/>
+                                <TextBox x:Name="loadedmilk" Margin="0,0,0,32" Grid.Column="1" HorizontalAlignment="Left" Width="665" IsReadOnly="True" Grid.RowSpan="2" />
+                                <ComboBox x:Name="staffcombo" SelectedIndex="0" Grid.Column="1" Margin="0,3,0,1" Grid.Row="1" HorizontalAlignment="Left" Width="665"/>
+                                <ComboBox x:Name="suppliercombo" SelectedIndex="0" Margin="0,33,0,1" Grid.Column="1" HorizontalAlignment="Left" Width="665" IsReadOnly="True" Grid.Row="1" Grid.RowSpan="2" SelectionChanged="suppliercombo_SelectionChanged" />
+                                <TextBox x:Name="Vehicle" Margin="0,0,0,4" Grid.Column="1" HorizontalAlignment="Left" Width="665" IsReadOnly="True" Grid.Row="5" />
+                                <TextBox x:Name="Driver" Grid.Column="1" HorizontalAlignment="Left" Width="665" IsReadOnly="True" Grid.Row="3" />
+                                <TextBox x:Name="Conductor" Grid.Column="1" HorizontalAlignment="Left" Width="665" IsReadOnly="True" Grid.Row="4" />
+                                <Button x:Name="AddDelivery" Grid.Column="1" Content="Add Delivery" Margin="561,135,-5,10" Grid.Row="6" HorizontalAlignment="Left" Width="142" Click="AddDelivery_Click" >
+                                    <Button.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFCBCBCB" Offset="0"/>
+                                            <GradientStop Color="#FF595858" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+
+                        </GroupBox>
+                    </Grid>
+
+                </TabItem>
+                <TabItem TabIndex="1" Header ="Unloaded at Creamery" x:Name="unloadEdatCreamery">
+                    <Grid HorizontalAlignment="Stretch" Margin="10,0,9,0">
+                        <GroupBox Header="Milk UnLoaded" Margin="0,25,0,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" >
+                            <Grid Margin="0,10,0,-10" Width="802">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="34"/>
+                                    <RowDefinition Height="38"/>
+                                    <RowDefinition Height="60"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="351*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="lblLitres1" Content="Milk Kg's Loaded:" Height="28" VerticalAlignment="Top"/>
+                                <Label x:Name="lblLoader1" Content="Loaded by:" Height="26" VerticalAlignment="Top" Margin="0,8,0,0" Grid.Row="1" RenderTransformOrigin="0.455,1.232"/>
+                                <Label x:Name="lblunloader" Content="Litres UnLoaded:" Height="26" VerticalAlignment="Top" Margin="-5,24,0,0" Grid.Row="6" RenderTransformOrigin="0.455,1.232"/>
+                                <Label x:Name="lblTransporter1" Content="Transporter:" Height="26" VerticalAlignment="Top" Margin="0,8,0,0" Grid.Row="2" RenderTransformOrigin="0.455,1.232"/>
+                                <Label x:Name="lblDriver1" Content="Driver:" Height="25" VerticalAlignment="Top" Margin="0,4,0,0" Grid.Row="3" RenderTransformOrigin="0.455,1.232"/>
+                                <Label x:Name="lblConductor1" Content="Conductor:" Height="29" VerticalAlignment="Top" Grid.Row="4" RenderTransformOrigin="0.455,1.232" Margin="0,5,0,0"/>
+                                <Label x:Name="lblVehicle1" Content="Vehicle:" Height="29" VerticalAlignment="Top" Grid.Row="5" RenderTransformOrigin="0.455,1.232" Margin="0,9,0,0"/>
+                                <TextBox x:Name="loadedmilk1" Margin="0,0,0,32" Grid.Column="1" HorizontalAlignment="Left" Width="665" Grid.RowSpan="2" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" />
+                                <TextBox x:Name="staffcombo1"  Grid.Column="1" Margin="0,3,0,1" Grid.Row="1" HorizontalAlignment="Left" Width="665" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                                <TextBox x:Name="suppliercombo1" Margin="0,33,0,1" Grid.Column="1" HorizontalAlignment="Left" Width="665" Grid.Row="1" Grid.RowSpan="2"  IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" />
+                                <TextBox x:Name="Vehicle1" Margin="0,0,0,4" Grid.Column="1" HorizontalAlignment="Left" Width="665" Grid.Row="5" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" />
+                                <TextBox x:Name="Driver1" Grid.Column="1" HorizontalAlignment="Left" Width="665" Grid.Row="3" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" />
+                                <TextBox x:Name="Conductor1" Grid.Column="1" HorizontalAlignment="Left" Width="665" Grid.Row="4" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" />
+                                <controls:NumericUpDown x:Name="Unloaded" Grid.Column="1" HorizontalAlignment="Left" Width="665" Grid.Row="6" Margin="0,24,0,10"   />
+                                <Button x:Name="UpdateDb" Content="Update" Grid.Column="1" Margin="540,72,37,10" Grid.Row="7" Click="UpdateDb_Click"  >
+                                    <Button.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFD6D6D6" Offset="0"/>
+                                            <GradientStop Color="#FF727070" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+
+                        </GroupBox>
+                    </Grid>
+
+                </TabItem>
+            </controls:MetroTabControl>
+        </StackPanel>
+    </Grid>
+</controls:MetroWindow>

@@ -1,0 +1,128 @@
+﻿<controls:MetroWindow x:Class="DairyMaster.apps.FarmerRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="Registration" Height="675.404" Width="999" ShowInTaskbar="False" Loaded="MetroWindow_Loaded">
+    <Grid Margin="0,0,0,5">
+        <Grid Background="#FFE5E5E5" Margin="0,0,0,-11">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
+                <controls:MetroTabControl x:Name="mainTabControl" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="589" >
+                    <TabItem x:Name="FarmerTab" Header="Farmer ">
+                        <GroupBox Margin="4,59,-4,-16" Header="Details" RenderTransformOrigin="0.5,0.5" >
+                            <GroupBox.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform AngleY="0.45"/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="-2.992"/>
+                                </TransformGroup>
+                            </GroupBox.RenderTransform>
+                            <Grid Margin="2,0,-2,6">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition/>
+
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="61"/>
+                                    <ColumnDefinition Width="284"/>
+                                    <ColumnDefinition Width="124"/>
+                                    <ColumnDefinition Width="376"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="txtregNo" Grid.ColumnSpan="4" Grid.Column="1" Margin="219,-70,0,0" Height="26" VerticalAlignment="Top" IsReadOnly="True" />
+
+
+                                <Label Content="Next of Kin Surname"  Height="26" VerticalAlignment="Top" Grid.Column="3" Margin="3,15,74,0" Grid.Row="3"/>
+                                <Label Content="Farmer ID Number" Height="27" VerticalAlignment="Top" Grid.Column="3" Margin="10,10,77,0" Grid.Row="1"/>
+
+                                <Label Content="Phone" HorizontalAlignment="Left" Height="29" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="53" Grid.ColumnSpan="2"/>
+                                <Label Content="Farmer First Name"                               Height="30" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,9,232,0"/>
+                                <Label Content="Farmer SurName" Grid.Column="3" Margin="7,8,191,5"  />
+                                <Label Content="Farmer's Bank " Grid.ColumnSpan="2" Margin="5,14,255,0" Grid.Row="2"/>
+                                <Label Content="Account " Margin="32,14,246,0" Grid.Row="2" Grid.Column="3"/>
+                                <Label Grid.ColumnSpan="2" Content="Registration Number" HorizontalAlignment="Left" Height="30" Margin="0,-70,0,0" VerticalAlignment="Top" Width="236"/>
+                                <Label Content="Next of Kin First Name" Grid.ColumnSpan="2" Height="42" VerticalAlignment="Top" Grid.Row="3" Margin="-3,15,218,0" RenderTransformOrigin="0.5,0.5"/>
+                                <Image x:Name="photoimgbox" Grid.Column="1" Margin="10,62,0,0" Grid.Row="3" HorizontalAlignment="Left" Width="218"  >
+                                    <Image.Effect>
+                                        <DropShadowEffect/>
+                                    </Image.Effect>
+                                </Image>
+
+                                <TextBox x:Name="FarmerFName" Height="26" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="1" Margin="57,10,0,0" TextChanged="FarmerFName_TextChanged" GotFocus="FarmerFName_GotFocus"/>
+
+                                <TextBox x:Name="FarmerOtherName" Grid.Column="3" Height="26" Margin="111,9,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="FarmerOtherName_TextChanged" GotFocus="FarmerOtherName_GotFocus" Grid.ColumnSpan="2" />
+                                <ComboBox x:Name="telPrefix" Grid.Column="1" Margin="10,11,203,3" Grid.Row="1" SelectedIndex="0">
+                                    <ListBoxItem Content="0722"/>
+                                    <ListBoxItem Content="0723"/>
+                                    <ListBoxItem Content="0724"/>
+                                    <ListBoxItem Content="0733"/>
+                                    <ListBoxItem Content="0734"/>
+                                    <ListBoxItem Content="0771"/>
+                                    <ListBoxItem Content="0772"/>
+                                </ComboBox>
+                                <TextBox x:Name="FarmerPhone" Grid.Column="1" Height="26" Margin="86,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="322" GotFocus="FarmerPhone_GotFocus"/>
+                                <TextBox x:Name="FarmerFamilyName" Grid.Column="3" Height="26" Margin="129,11,3,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="2" GotFocus="FarmerFamilyName_GotFocus" />
+
+                                <ComboBox x:Name="BankList" Grid.Column="1" Margin="29,12,0,2" Grid.Row="2" Grid.ColumnSpan="2" SelectedIndex="0">
+                                    <ListBoxItem Content="Bank Of Africa"/>
+                                    <ListBoxItem Content="Bank of Baroda"/>
+                                    <ListBoxItem Content="Barclays Bank"/>
+                                    <ListBoxItem Content="Consolidated Bank"/>
+                                    <ListBoxItem Content="Cooperative Bank"/>
+                                    <ListBoxItem Content="EcoBank"/>
+                                    <ListBoxItem Content="Equity Bank"/>
+                                    <ListBoxItem Content="Family Bank"/>
+                                    <ListBoxItem Content="Imperial Bank"/>
+                                    <ListBoxItem Content="Kenya Commercial Bank"/>
+                                    <ListBoxItem Content="National Bank"/>
+                                    <ListBoxItem Content="Postal Bank"/>
+                                    <ListBoxItem Content="Standered Chartered Bank"/>
+                                </ComboBox>
+                                <TextBox x:Name="FarmerBankNo" Grid.Column="3" Margin="88,14,0,0" Grid.Row="2" Grid.ColumnSpan="2"/>
+                                <TextBox x:Name="NextofKinFName" Height="26" Margin="0,15,1,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="336" GotFocus="NextofKinFName_GotFocus" Grid.Column="1" />
+                                <TextBox x:Name="NextOfKinOtherNames" Grid.Column="3" Height="26" Margin="132,15,6,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="3" Grid.ColumnSpan="2" GotFocus="NextOfKinOtherNames_GotFocus"/>
+                                <Button x:Name="btnLoadPicture" Content="Load Picture" Grid.Column="4" Height="55" Margin="0,57,3,0" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Right" Width="93" Click="btnLoadPicture_Click">
+                                    <Button.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF9E9C9C" Offset="0"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+                                </Button>
+                                <Button x:Name="btnRegister" Content="Register" Grid.Column="4" Height="55" Margin="0,277,3,0" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Right"  Click="btnRegister_Click" RenderTransformOrigin="0.5,0.5" Width="93">
+                                    <Button.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFA09E9E" Offset="0.003"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Button.Background>
+
+                                </Button>
+
+
+                            </Grid>
+
+                        </GroupBox>
+
+                    </TabItem>
+
+                    <TabItem x:Name="ViewFarmersTab" Header="Registered Farmers">
+                        <Grid Background="#FFF0EBB6">
+                            <DataGrid x:Name="farmerDatagrid" Background="LightGray" RowBackground="LightYellow"
+AlternatingRowBackground="LightBlue" HorizontalAlignment="Stretch" Height="550" VerticalAlignment="Top"/>
+                        </Grid>
+                    </TabItem>
+                </controls:MetroTabControl>
+            </ScrollViewer>
+        </Grid>
+        <!--<Button Content="Register Farmer"  Click="Button_Click" Margin="26,436,37,34"/>-->
+
+    </Grid>
+</controls:MetroWindow>

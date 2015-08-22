@@ -1,0 +1,44 @@
+﻿<controls:MetroWindow
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Name="metroWindow" mc:Ignorable="d" x:Class="DairyMaster.MainWindow"
+    Icon="Resources\bull.ico"                  
+    Title="Dairy Master"
+                      Height="672.867"
+                      Width="1077.981" WindowStartupLocation="CenterScreen" Background="#FF0E0E66" Loaded="metroWindow_Loaded" WindowState="Maximized">
+
+
+    <ScrollViewer Margin="10,0,15,6" PanningMode="Both" ClipToBounds="True" SnapsToDevicePixels="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
+        <Grid Height="545" Width="754">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="376*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="157*"/>
+                <RowDefinition Height="13*"/>
+                <RowDefinition Height="157*"/>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="157*"/>
+                <RowDefinition Height="46*"/>
+            </Grid.RowDefinitions>
+            <controls:Tile x:Name="tile1" Content="TILE 1" HorizontalAlignment="Left" Height="157" Margin="0" VerticalAlignment="Top" Width="294" Title="Daily Milk Intake" Click="Tile_Click_1"/>
+            <controls:Tile x:Name="tile2" Content="TILE 2" HorizontalAlignment="Left" Height="157" Margin="299,0,0,0" VerticalAlignment="Top" Width="234" Title="Daily Milk Delivery " Background="#CC9A11DA" Click="tile2_Click"/>
+            <controls:Tile x:Name="tile3" Content="TILE 3" HorizontalAlignment="Left" Height="157" Margin="538,0,0,0" VerticalAlignment="Top" Width="204" Title="Daily Expenses" Background="#CCA20B0B" Click="tile3_Click"/>
+            <controls:Tile x:Name="tile4" Content="TILE 4" HorizontalAlignment="Left" Height="157" Margin="0" Grid.Row="4" VerticalAlignment="Top" Width="294" Background="#CC3F11DA" Title="Farmer Pane" Click="tile4_Click"/>
+            <controls:Tile Content="TILE 5" HorizontalAlignment="Left" Height="157" Margin="299,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="234" Title="Cooperative Pane" Click="Tile_Click" Background="#CC129E0B"/>
+            <controls:Tile x:Name="Tile6" Content="TILE 6" HorizontalAlignment="Left" Height="157" Margin="538,0,0,0" Grid.Row="4" VerticalAlignment="Top" Width="204" Background="#CC8F8309" Title="Settings"/>
+            <controls:Tile x:Name="tile7" Content="Tile" HorizontalAlignment="Left" Height="157" Margin="0" Grid.Row="2" VerticalAlignment="Top" Width="183" Background="#CCB90989" Click="tile7_Click" Title="Farmer Registration"/>
+            <controls:Tile x:Name="Tile8" Content="Tile" HorizontalAlignment="Left" Height="157" Margin="188,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="188" Background="#CCDAAC11" Click="Tile8_Click" Title="Staff Registration"/>
+            <controls:Tile x:Name="Tile9" Content="Tile" HorizontalAlignment="Left" Height="157" Margin="381,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="166" Background="#CC76DA11" Click="Tile9_Click" Title="Supplier Registration"/>
+            <controls:Tile x:Name="Tile10" Content="TILE 7" HorizontalAlignment="Left" Height="157" Margin="552,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="190" Background="#CC0C3A4D" Click="Tile10_Click" Title="Vacant" MouseUp="Tile10_MouseUp" Loaded="Tile10_Loaded"/>
+            <Label x:Name="timeLbl" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="10,-22,-139,0" VerticalAlignment="Top" Width="131" Foreground="White" FontSize="18"/>
+            <Label x:Name="datelbl" Content="" HorizontalAlignment="Left" Height="80" Margin="-154,-21,0,0" VerticalAlignment="Top" Width="149" Foreground="White" FontSize="18"/>
+            
+        </Grid>
+
+    </ScrollViewer>
+
+</controls:MetroWindow>

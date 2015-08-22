@@ -1,0 +1,1 @@
+﻿select sum(FarmerMilKDelivery) from MilkDelivery where FarmerNo like '%KDFC12015%' and DateOfDelivery Between '8/1/2015' and '8/17/2015'

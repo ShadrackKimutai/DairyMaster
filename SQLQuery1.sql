@@ -1,0 +1,1 @@
+﻿update MilkCreameryDelivery Set(Litres_Unloaded="", Deficit="") WHERE DATE=""
