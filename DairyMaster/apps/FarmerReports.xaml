@@ -2,8 +2,33 @@
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FarmerReports" Height="300" Width="616">
+        Title="FarmerReports" Height="465" Width="679" Loaded="MetroWindow_Loaded">
     <Grid>
-        
+        <controls:MetroTabControl>
+            <TabItem Header="Delivery Reports">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="29*"/>
+                        <RowDefinition Height="366*"/>
+                    </Grid.RowDefinitions>
+                    <ToolBarPanel>
+                        <ToolBar Height="28" Margin="0,0,618,0" >
+                            <Button Content="Daily Delivery"/>
+
+
+                        </ToolBar>
+                    </ToolBarPanel>
+                    <DataGrid x:Name="deliveryGrid" Grid.Row="1"  HorizontalContentAlignment="Stretch" Background="Gray" RowBackground="#FF38A3CB" Foreground="Black" 
+AlternatingRowBackground="LightBlue" VerticalContentAlignment="Stretch" Margin="0,0,11,1"  GridLinesVisibility="All" HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" FontSize="14" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Purchases">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Shares">
+                <Grid Background="#FF345345"/>
+            </TabItem>
+        </controls:MetroTabControl>
+
     </Grid>
 </controls:MetroWindow>

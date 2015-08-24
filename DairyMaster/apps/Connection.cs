@@ -15,7 +15,7 @@ namespace DairyMaster.apps
         public SqlDataAdapter da = new SqlDataAdapter();
         public DataSet ds = new DataSet();
         public SqlDataReader dr;
-        public String connectionString = DairyMaster.Properties.Resources.DbPath;
+        public String connectionString = DairyMaster.Properties.Resources.tempDbPath;
         public void connect()
         {
             try {

@@ -2,25 +2,14 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
          xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-         Title="Registration" Height="675.404" Width="999" ShowInTaskbar="False" Loaded="MetroWindow_Loaded" >
-    <Grid Margin="0,0,0,5">
-        <Grid Background="#FFE5E5E5" Margin="0,0,0,-11">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10">
-                <controls:MetroTabControl x:Name="mainTabControl" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="589" >
+         Title="Registration" Height="741.076" Width="999" ShowInTaskbar="False" Loaded="MetroWindow_Loaded" >
+    <Grid Margin="0,0,0,10" >
+       <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" >
+                <controls:MetroTabControl x:Name="mainTabControl" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalAlignment="Stretch" >
                     <TabItem x:Name="FarmerTab" Header="Staff">
-                        <GroupBox Margin="0,36,0,7" Header="Details" RenderTransformOrigin="0.5,0.5" >
-                            <GroupBox.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform AngleY="0.45"/>
-                                    <RotateTransform/>
-                                    <TranslateTransform Y="-2.992"/>
-                                </TransformGroup>
-                            </GroupBox.RenderTransform>
-                            <Grid Margin="12,10,-12,-4">
+                        <GroupBox Header="Staff Details" Margin="10,35,0,-76">
+                            
+                            <Grid Margin="12,10,-12,-55">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="40"/>
                                     <RowDefinition Height="40"/>
@@ -104,13 +93,12 @@
                     <TabItem x:Name="ViewFarmersTab" Header="Registered Staff">
                         <Grid Background="#FFF0EBB6">
                             <DataGrid x:Name="staffDatagrid" Background="LightGray" RowBackground="LightYellow"
-AlternatingRowBackground="LightBlue" HorizontalAlignment="Stretch" Height="550" VerticalAlignment="Top" SelectionChanged="staffDatagrid_SelectionChanged"/>
+AlternatingRowBackground="LightBlue" HorizontalAlignment="Stretch"  SelectionChanged="staffDatagrid_SelectionChanged"/>
                         </Grid>
                     </TabItem>
                 </controls:MetroTabControl>
             </ScrollViewer>
-        </Grid>
-        <!--<Button Content="Register Farmer"  Click="Button_Click" Margin="26,436,37,34"/>-->
-
+        
+       
     </Grid>
 </controls:MetroWindow>

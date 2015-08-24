@@ -81,7 +81,9 @@ namespace DairyMaster
 
         private void tile4_Click(object sender, RoutedEventArgs e)
         {
-
+            apps.FarmerReports Fr = new apps.FarmerReports();
+            Fr.WindowState = WindowState.Maximized;
+            Fr.ShowDialog();
         }
 
         private void Tile_Click(object sender, RoutedEventArgs e)
